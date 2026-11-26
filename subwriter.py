@@ -6,7 +6,7 @@ from scf import load_config, simple_conf_key_get, get_config
 from anim_typing import print_line
 
 SONG_CSV_VERSION = 0.1
-VERSION = 0.1
+VERSION = 0.2
 AppDirectory = str(pathlib.Path().resolve()).replace('\\', '/')
 
 lines = []

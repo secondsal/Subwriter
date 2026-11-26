@@ -64,10 +64,11 @@ def writeMenu():
         
         if line[0].lower() == "<using version>" and len(line) == 2:
             version = float(line[1])
-            if SONG_CSV_VERSION <= version:
-                fprint(simple_conf_key_get("langIndex", "[4]", LangStr))
+            if SONG_CSV_VERSION == version or SONG_CSV_VERSION < version:
+                continue
+            else:
+                fprint(simple_conf_key_get("langIndex", "[4]", LangStr),f"[red]{SONG_CSV_VERSION} and {version}[/red]")
                 return
-            continue
         
         try:
             print_line(line[0], int(line[1]), int(line[2]), str(line[3]), strToBoolReal(line[4]))

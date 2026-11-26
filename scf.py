@@ -37,7 +37,7 @@ def get_config(key):
     try:
         return CONFIGS[key]
     except KeyError:
-        return None
+        return None 
 
 def simple_conf_key_get(confKey, innerKey, dataDict: dict):
     return dataDict[str(get_config(confKey))][innerKey]

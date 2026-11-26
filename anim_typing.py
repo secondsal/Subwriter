@@ -18,5 +18,5 @@ def print_line(text: str, typingMs: int, afterMs: int, color: str, fromNewLine: 
         else:
             fprint(f"[{color}]{ch}[/{color}]", end="")
         time.sleep(speed/1000)
-    time.sleep(afterMs/1000)
+    time.sleep(afterMs/1000) 
     

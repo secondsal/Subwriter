@@ -1,0 +1,19 @@
+Text;typingMs;AfterMs;Color;NextFromNewLine
+<$$$> First line is needed!!!!! Without it any first song line gonna to cut!
+<$$$> Template song .csv
+<Using Version>;0.2
+Я НАЗВАВ ЙОГО БОГДАН;1820;730;yellow;True
+ВІН МАВ РОТ ЯК ;1400;0;yellow;False
+ЧЕМОДАН;420;300;red;True
+<$$$> Приспів 1
+БОДЯ БОС ВСІХ ПАВУКІВ;1850;300;green;True
+ВІН ЇВ МУХ І КОМАРІВ;1850;300;green;True
+ХАВАВ В МЕНЕ ПРЯМО З РУУУК;1850;100;green;True
+ДРЕСЕРОВАНИЙ ПАВУК;1850;100;green;True
+<$$$> Приспів 2
+<Empty Line>
+<$$$> '<Empty Line>' це просто \n. Вказування: Лише <Empty Line>! Без інших аргументів
+БО-БО-БО-БОДЯ БОС ВСІХ ПАВУКІВ;1950;300;green;True
+ВІН ЇВ МУХ І КОМАРІВ;1850;300;green;True
+ХАВАВ ТО САМЕ ШО ЯЯЯЯ;1850;100;green;True
+ШКОДА БОДЬКИ ВЖЕ НЕМА;1850;100;green;True

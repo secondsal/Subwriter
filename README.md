@@ -6,8 +6,4 @@
 
 ## How to use:
 
-- Make a song file (.csv format, guide [here](README.md))
-- Launch application
-- Enter song file name (without extensions)
-
-And here you are!
+- Make a song file (.csv format, guide at )

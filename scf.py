@@ -3,6 +3,18 @@ CONFIG_PATH = ""
 CONFIGS_RAW = []
 CONFIGS = {}
 
+class LangString:
+    def __init__(self, x = str):
+        self.lang: str = x
+        self.var_string = "~" # customize if you want
+
+        
+    def export(self, vars: list):
+        full = self.lang
+        for i, var in enumerate(vars):
+            full = full.replace("~", str(vars[i]), 1)
+        return full
+
 def set_right_type(x):
     try:
         return int(x)

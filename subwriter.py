@@ -2,7 +2,7 @@ import csv
 import pathlib
 import sys
 from rich import print as fprint
-from scf import load_config, simple_conf_key_get, get_config
+from scf import load_config, simple_conf_key_get, get_config, LangString
 from anim_typing import print_line
 
 SONG_CSV_VERSION = 0.1
@@ -24,13 +24,13 @@ LangStr = {
         "[1]": "[yellow]No song selected. Write the song .csv file name [/yellow]\n(Drop all .csv's in songs/ directory)",
         "[2]": "Enter song name (without '.csv' at the end) > ",
         "[3]": "[red]Song file not found[/red]",
-        "[4]": "[red]Incompatible csv versions![/red]"
+        "[4]": LangString("[red]Incompatible csv versions! ~ and ~. [/red]")
     },
     "2": {
         "[1]": "[yellow]Пісню не вибрано. Вкажіть .csv назви пісенного файлу [/yellow]\n(Всі .csv файли мають бути у папці songs/)",
         "[2]": "Вкажіть назву пісні (без '.csv' вкінці) > ",
         "[3]": "[red]Файл пісні не знайдено[/red]",
-        "[4]": "[red]Не підтримувана версія csv![/red]"
+        "[4]": LangString("[red]Не підтримувана версія csv! ~ i ~. [/red]")
     }
 }
 
@@ -64,10 +64,10 @@ def writeMenu():
         
         if line[0].lower() == "<using version>" and len(line) == 2:
             version = float(line[1])
-            if SONG_CSV_VERSION == version or SONG_CSV_VERSION < version:
+            if SONG_CSV_VERSION >= version:
                 continue
             else:
-                fprint(simple_conf_key_get("langIndex", "[4]", LangStr),f"[red]{SONG_CSV_VERSION} and {version}[/red]")
+                fprint(simple_conf_key_get("langIndex", "[4]", LangStr).export([SONG_CSV_VERSION, version]))
                 return
         
         try:
